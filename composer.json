@@ -1,0 +1,41 @@
+{
+    "name": "orkhanshukurlu/laravel-git-artisan",
+    "description": "Run multiple git commands in a single command",
+    "keywords": [
+        "orkhanshukurlu",
+        "laravel",
+        "git",
+        "artisan"
+    ],
+    "homepage": "https://github.com/orkhanshukurlu/laravel-git-artisan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Orkhan Shukurlu",
+            "email": "orkhandev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/console": "^10.10",
+        "illuminate/process": "^10.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrkhanShukurlu\\GitArtisan\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OrkhanShukurlu\\GitArtisan\\GitArtisanServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
