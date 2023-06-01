@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace OrkhanShukurlu\GitArtisan;
 
 use Illuminate\Support\ServiceProvider;
+use OrkhanShukurlu\GitArtisan\Commands\GitCommand;
 
 final class GitArtisanServiceProvider extends ServiceProvider
 {
