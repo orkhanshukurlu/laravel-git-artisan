@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace OrkhanShukurlu\GitArtisan;
+namespace OrkhanShukurlu\GitArtisan\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Process\ProcessResult;
-use Illuminate\Support\Facades\Process;
+use Illuminate\Process\PendingProcess;
 
 final class GitCommand extends Command
 {
@@ -17,6 +17,11 @@ final class GitCommand extends Command
                                 {--push=   : Push changes to the branch}
                                 {--no-pull : Commit changes without pulling}
                                 {--no-push : Commit changes without pushing}';
+
+    public function __construct(private readonly PendingProcess $process)
+    {
+        parent::__construct();
+    }
 
     public function handle(): int
     {
@@ -118,33 +123,33 @@ final class GitCommand extends Command
 
     private function runAddProcess(): ProcessResult
     {
-        return Process::run(['git', 'add', '.']);
+        return $this->process->run(['git', 'add', '.']);
     }
 
     private function runCommitProcess(): ProcessResult
     {
         $message = $this->getCommitMessage();
 
-        return Process::run(['git', 'commit', '-m', $message]);
+        return $this->process->run(['git', 'commit', '-m', $message]);
     }
 
     private function runPullProcess(): ProcessResult
     {
         $branch = $this->getPullBranch();
 
-        return Process::run(['git', 'pull', 'origin', $branch]);
+        return $this->process->run(['git', 'pull', 'origin', $branch]);
     }
 
     private function runPushProcess(): ProcessResult
     {
         $branch = $this->getPushBranch();
 
-        return Process::run(['git', 'push', 'origin', $branch]);
+        return $this->process->run(['git', 'push', 'origin', $branch]);
     }
 
     private function runStatusProcess(): ProcessResult
     {
-        return Process::run(['git', 'status']);
+        return $this->process->run(['git', 'status']);
     }
 
     private function status(): void
