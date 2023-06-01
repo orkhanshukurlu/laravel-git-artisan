@@ -11,7 +11,7 @@
 
 Composer vasitəsilə paketi quraşdırın
 
-    composer require orkhanshukurlu/laravel-git-artisan
+    composer require orkhanshukurlu/laravel-git-artisan --dev
 
 ## İstifadə
 
