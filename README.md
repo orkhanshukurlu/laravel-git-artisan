@@ -4,8 +4,8 @@
 
 [![Laravel 10](https://img.shields.io/badge/Laravel-10-red.svg)](http://laravel.com)
 [![Latest Stable Version](https://img.shields.io/packagist/v/orkhanshukurlu/laravel-git-artisan.svg)](https://packagist.org/packages/orkhanshukurlu/laravel-git-artisan)
-[![Total Downloads](http://poser.pugx.org/orkhanshukurlu/laravel-git-artisan/downloads)](https://packagist.org/packages/orkhanshukurlu/laravel-git-artisan)
-[![License](http://poser.pugx.org/orkhanshukurlu/laravel-git-artisan/license)](https://packagist.org/packages/orkhanshukurlu/laravel-git-artisan)
+[![Total Downloads](https://poser.pugx.org/orkhanshukurlu/laravel-git-artisan/downloads)](https://packagist.org/packages/orkhanshukurlu/laravel-git-artisan)
+[![License](https://poser.pugx.org/orkhanshukurlu/laravel-git-artisan/license)](https://packagist.org/packages/orkhanshukurlu/laravel-git-artisan)
 
 ## Quraşdırma
 
